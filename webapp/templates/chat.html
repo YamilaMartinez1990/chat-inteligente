@@ -1,0 +1,90 @@
+<!-- webapp/templates/chat.html --> 
+{% extends "base.html" %} 
+{% block content %} 
+ 
+<div class="row justify-content-center"> 
+  <!-- Sidebar de Roles -->
+  <div class="col-12 col-lg-2 mb-3 mb-lg-0">
+    <div class="roles-sidebar">
+      <h6 class="text-white mb-3 text-center fw-bold">Seleccionar Rol</h6>
+      
+      <button class="role-btn active" data-role="asistente">
+        <i class="bi bi-headset"></i>
+        <span>Asistente</span>
+      </button>
+      
+      <button class="role-btn" data-role="profesor">
+        <i class="bi bi-mortarboard-fill"></i>
+        <span>Profesor</span>
+      </button>
+      
+      <button class="role-btn" data-role="traductor">
+        <i class="bi bi-translate"></i>
+        <span>Traductor</span>
+      </button>
+      
+      <button class="role-btn" data-role="programador">
+        <i class="bi bi-code-slash"></i>
+        <span>Programador</span>
+      </button>
+      
+      <button class="role-btn" data-role="redactor">
+        <i class="bi bi-pen"></i>
+        <span>Redactor</span>
+      </button>
+      
+      <button class="role-btn" data-role="coach_carrera">
+        <i class="bi bi-briefcase"></i>
+        <span>Coach Carrera</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Chat Principal -->
+  <div class="col-12 col-lg-8"> 
+    <div class="card shadow-lg border-0"> 
+      <div class="card-header d-flex flex-wrap gap-2 align-items-center">
+        <span class="fw-semibold me-auto">Chat con IA</span> 
+        
+        <span id="currentRole" class="badge bg-primary">Asistente</span>
+ 
+        <button id="btnClear" class="btn btn-outline-secondary btn-sm"> 
+          <i class="bi bi-trash"></i> Limpiar 
+        </button> 
+      </div> 
+ 
+      <div id="chatBody" class="card-body chat-body"> 
+        <!-- Mensajes renderizados por JS --> 
+        <button id="scrollToBottom" class="btn btn-primary btn-sm scroll-to-bottom" title="Ir al final">
+          <i class="bi bi-arrow-down"></i>
+        </button>
+      </div> 
+ 
+      <div class="card-footer"> 
+        <form id="chatForm" class="d-flex gap-2"> 
+          <input 
+            id="chatInput" 
+            class="form-control" 
+            type="text" 
+            placeholder="Escribí tu mensaje..." 
+            autocomplete="off"
+            maxlength="500"
+          /> 
+          <button id="btnSend" class="btn btn-primary" type="submit"> 
+            <i class="bi bi-send-fill"></i> Enviar 
+          </button> 
+        </form> 
+        <div class="d-flex justify-content-between align-items-center mt-2">
+          <small class="text-muted"> 
+            * Chatbot con Google Gemini AI
+          </small>
+          <small id="charCounter" class="text-muted">
+            0 / 500
+          </small>
+        </div>
+      </div> 
+    </div> 
+  </div> 
+</div> 
+ 
+{% endblock %} 
