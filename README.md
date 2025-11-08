@@ -1,4 +1,4 @@
-# chat-bot-final
+# chat-inteligente
 # 🤖 Chatbot con IA - Asistente Inteligente + Noticias
 
 ## 📝 Descripción del Proyecto
