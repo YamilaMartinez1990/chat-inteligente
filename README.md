@@ -99,7 +99,7 @@ chat-bot-final/
 
 ```bash
 git clone https://github.com/YamilaMartinez1990/chat-inteligente.git
-cd chat-bot-final
+cd chat-inteligente
 ```
 
 ### Paso 2: Crear un Entorno Virtual
